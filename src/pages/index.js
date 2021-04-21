@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { graphql, Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // markup
 const IndexPage = ({ data }) => {
@@ -9,6 +10,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo title={'Home page'} />
+      <StaticImage
+        src='https://images.unsplash.com/photo-1506102383123-c8ef1e872756?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80'
+        alt='Sunset on the beach.'
+        layout='fullWidth'
+        aspectRatio={21 / 9}
+      />
       <h1>Home page</h1>
 
       {posts.map((post) => {

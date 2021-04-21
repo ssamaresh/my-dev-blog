@@ -12,6 +12,16 @@ module.exports = {
         name: `posts`,
       },
     },
-    'gatsby-plugin-mdx'
-  ],
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-theme-ui',
+      options: {
+        preset: '@theme-ui/preset-funk',
+        prismPreset: 'prism-okaidia',
+      },
+    },
+    'gatsby-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+  ], 
 };
